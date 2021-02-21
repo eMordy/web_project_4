@@ -1,0 +1,17 @@
+.cards__text-heart{
+    background-image: url("../../../images/heart.png");
+    height: 22px;
+    width: 23px;
+    /*margin-left: 50px;*/
+    margin-top: 28px;
+    margin-right: 15px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    }
+
+    .cards__text-heart{
+     opacity: 50%;
+    }
