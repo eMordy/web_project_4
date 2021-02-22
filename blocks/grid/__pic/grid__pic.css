@@ -1,9 +1,10 @@
 .grid__pic{
    margin: 0;
    padding: 0;
+   width: 282px;
+    height: 282px;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 3;
+    cursor: pointer
     }
-    /*.cards__pic{
-        width: 282px;
-        height: 282px;
-        border-radius: 10px 10px 0px 0px;
-        }*/
+   

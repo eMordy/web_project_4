@@ -5,7 +5,6 @@
    line-height: 22px;
    margin: 16px 0 0 0;
    padding: 0;
-  font-family: 'Inter', 'Arial', sans-serif;
    font-weight: normal;
   color: #FFFFFF;
    text-overflow: ellipsis;
@@ -14,27 +13,12 @@
   
 }
 
-@media screen and (max-width:1100px) {
-  .profile__about-me{
-    width: 100%;
-    text-align: center;
-  }
-}
+
 @media screen and (max-width:420px) {
   .profile__about-me{
    font-size: 14px;
    line-height: 17px;
   }
 }
-/*.profile__about-me{
-    font-size: 14px;
-    line-height: 17px;
-    margin-top: 16px;
-    margin-bottom: 0;
-    font-family: 'Inter', 'Arial', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #FFFFFF;
-    
-  }
-  */
+
+ 

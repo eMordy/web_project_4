@@ -1,33 +1,26 @@
 .popup__input{
 width: 100%;
 font-weight: 400;
-  margin: 29.74px 0 0 0 ;
-padding: 0;
+ /* margin: 29.74px 0 0 0 ;*/
+ font-size: 14px;
+margin-bottom: 40px;
+border: none;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 border-top: none;
 border-right: none;
 border-left: none;
-border-bottom: 1px solid rgba(0, 0, 0, .2) solid;
+border-bottom: 1px solid rgba(0, 0, 0, .2);
+overflow: hidden;
+
+max-width: 358px;
+margin-left: 36px;
 
 }
-/*.form__input {
-    border: none;
-    font-size: 14px;
-    max-width: 358px;
-    margin-left: 36px;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    margin-bottom: 29.74px;
-    height: 27.26px;
-    font-family: 'Inter', 'Arial', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 17px;
-    color: #000000;
-  
-   
-  }
   
   @media screen and (max-width: 425px) {
-    .form__input {
+    .popup__input {
       max-width: 210px;
     }
   }
