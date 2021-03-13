@@ -6,6 +6,7 @@
 @import url('./__submit/popup__submit.css');
 
 .popup {
+   background-color: black;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -16,7 +17,6 @@
     left: 0;
     margin: 0;
     padding: 0;
-    background-color: black;
     z-index: 4;
 
     
