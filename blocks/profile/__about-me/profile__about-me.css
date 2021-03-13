@@ -2,6 +2,8 @@
 .profile__about-me{
   max-width: 415px;
   font-size: 18px;
+  font-family: 'Inter', Arial, sans-serif;
+font-weight: 400;
    line-height: 22px;
    margin: 16px 0 0 0;
    padding: 0;
@@ -12,12 +14,22 @@
    overflow: hidden;
   
 }
+@media screen and (max-width:1100px) {
+  .profile__about-me{
+    width: 100%;
+        text-align: center;
+  }
+}
 
+ 
 
 @media screen and (max-width:420px) {
   .profile__about-me{
-   font-size: 14px;
-   line-height: 17px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 162px;
   }
 }
 

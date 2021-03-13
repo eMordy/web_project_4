@@ -1,8 +1,18 @@
 .popup__input{
-width: 100%;
+  width: 358px;
+  height: 27.26px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  /*
+  width: 100%;
 font-weight: 400;
  /* margin: 29.74px 0 0 0 ;*/
- font-size: 14px;
+ /*font-size: 14px;
 margin-bottom: 40px;
 border: none;
 text-overflow: ellipsis;

@@ -1,10 +1,10 @@
 .profile__info{
   margin: 0 0 0 30px;
   padding: 0;
-  color: white;
   max-width: 415px;
-  display: flex;
+  color: white;
   flex-shrink: 1;
+  display: flex;
   flex-wrap: wrap;
   align-items: baseline;
 }
@@ -20,6 +20,7 @@
 @media screen and (max-width: 480px) {
   
   .profile__info {
+    margin-top: 2px;
     justify-content: center;
   }
 }
