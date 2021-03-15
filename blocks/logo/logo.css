@@ -1,13 +1,16 @@
-.logo{
+.logo {
     margin: 0 0 41px 0;
     padding: 0;
 }
+
 @media screen and (max-width: 480px) {
-    .logo{
+    .logo {
         max-width: 126px;
         margin-left: 27px;
         margin-bottom: 32px;
-    }}
+    }
+}
+
 
 /*
 @media screen and (max-width: 768px) {

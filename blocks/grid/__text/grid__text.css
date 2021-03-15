@@ -1,8 +1,7 @@
-.grid__text{
+.grid__text {
     margin: 25px 15px 31px 21px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
-
 }

@@ -1,38 +1,37 @@
 .profile__edit {
-  width: 24px;
-  height: 24px;
-  margin: 0 0 0 18px;
-  padding: 0;
-  background-image: url("../../../images/mouse.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #FFFFFF;
-  background-color: transparent;
-  transition-duration: 1s;
-  cursor: pointer;
-
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 18px;
+    padding: 0;
+    background-image: url("../../../images/mouse.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    transition-duration: 1s;
+    cursor: pointer;
 }
 
 .profile__edit:hover {
-  opacity: .6;
+    opacity: .6;
 }
-@media screen and (max-width: 1100px) {
-  .profile__edit {
-    margin-left: 10px;
-    
-   
 
-  }
+@media screen and (max-width: 1100px) {
+    .profile__edit {
+        margin-left: 10px;
+    }
 }
+
 @media screen and (max-width: 480px) {
-  .profile__edit {
-    max-width: 18px;
-      max-height: 18px;
-     /* margin-top: 20px;
+    .profile__edit {
+        max-width: 18px;
+        max-height: 18px;
+        /* margin-top: 20px;
       margin-left: 12px;
 */
-  }
+    }
 }
+
 
 /*.profile__edit {
     width: 24px;
@@ -63,4 +62,3 @@
   
     }
   }*/
-  

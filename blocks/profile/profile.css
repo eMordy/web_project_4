@@ -5,33 +5,32 @@
 @import url('./__info/profile__info.css');
 @import url('./__picture/profile__picture.css');
 .profile {
-  
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  }
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-  
-
-
-  @media screen and (max-width: 1100px){
-.profile {
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+@media screen and (max-width: 1100px) {
+    .profile {
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
     }
 }
 
 @media screen and (max-width: 480px) {
-  .profile {
-   /* width: 288px;
+    .profile {
+        /* width: 288px;
     flex-direction: column;
     margin-top: 38px; לבדוק אם אפשר לשנות פשוט את המרגין
   */
-  width: calc(100% - 38px);
-}} 
+        width: calc(100% - 38px);
+    }
+}
+
+
 /*
 .profile {
     max-width: 882px;
