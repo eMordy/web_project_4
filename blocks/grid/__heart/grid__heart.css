@@ -1,5 +1,5 @@
 .grid__heart {
-    background-image: url("../../../images/heart.png");
+    background-image: url("../../../images/Vectorheart.svg");
     height: 19px;
     width: 21px;
     /*margin-left: 50px;*/
@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-.cards__text-heart {
+.grid__heart {
     opacity: 50%;
 }
 

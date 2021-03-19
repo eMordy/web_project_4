@@ -2,6 +2,6 @@
     outline: none;
 }
 
-.button.hover {
+.button:hover {
     cursor: pointer;
 }
