@@ -7,20 +7,23 @@
     <title>Around The U.S.</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
-<main class="content">
 
-    <body class="page">
-        <header class="header">
-            <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo">
-        </header>
+<body class="page">
+    <header class="header">
+        <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo">
+    </header>
+    <main class="content">
 
         <section class="profile">
             <img class="profile__picture" src="./images/profile.jpg" alt="profile-picture">
 
             <div class="profile__info">
-                <!--<div class="profile__info-text"> removed-->
-                <h1 class="profile__info-name">Jacques Cousteau</h1>
-                <button class="profile__edit button" aria-label="edit" type="button"></button>
+                <div class="profile__container">
+
+                    <!--<div class="profile__info-text"> removed-->
+                    <h1 class="profile__info-name">Jacques Cousteau</h1>
+                    <button class="profile__edit button" aria-label="edit" type="button"></button>
+                </div>
                 <h2 class="profile__about-me">Explorer</h2>
 
             </div>
@@ -78,24 +81,24 @@
                 </li>
             </ul>
         </section>
-</main>
+    </main>
 
-<footer class="footer">
-    <p class="footer__copyright"> &copy; 2020 Around The U.S.</p>
-</footer>
-<div class="popup popup_closed">
-    <div class="popup__container">
-        <button class="button popup__close" aria-label="close" type="button"></button>
-        <!--changed-->
-        <form name="editProfile" action="#" class="popup__form">
-            <h2 class="popup__edit">Edit Profile</h2>
-            <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required>
-            <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required>
-            <button class="button popup__submit" type="submit">Save</button>
-        </form>
+    <footer class="footer">
+        <p class="footer__copyright"> &copy; 2020 Around The U.S.</p>
+    </footer>
+    <div class="popup popup_closed">
+        <div class="popup__container">
+            <button class="button popup__close" aria-label="close" type="button"></button>
+            <!--changed-->
+            <form name="editProfile" action="#" class="popup__form">
+                <h2 class="popup__edit">Edit Profile</h2>
+                <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required>
+                <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required>
+                <button class="button popup__submit" type="submit">Save</button>
+            </form>
+        </div>
     </div>
-</div>
-<script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
