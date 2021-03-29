@@ -2,8 +2,11 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    margin: 35px 0 0 36px;
-    padding: 0;
+    /*margin: 35px 0 0 36px;
+    padding: 0;*/
+    align-self: flex-start;
+    margin: 0 0 44px;
+    color: #000000;
     /* margin: 34px 0 0 36px;
   padding: 0;
   font-weight: 900;
@@ -17,5 +20,6 @@
     .popup__edit {
         font-size: 18px;
         line-height: 22px;
+        margin: 24px 0px 70px;
     }
 }
