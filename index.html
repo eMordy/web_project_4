@@ -13,71 +13,21 @@
         <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo">
     </header>
     <main class="content">
-
         <section class="profile">
             <img class="profile__picture" src="./images/profile.jpg" alt="profile-picture">
 
             <div class="profile__info">
                 <div class="profile__container">
-
                     <h1 class="profile__info-name">Jacques Cousteau</h1>
                     <button class="profile__edit button" aria-label="edit" type="button"></button>
                 </div>
                 <h2 class="profile__about-me">Explorer</h2>
-
             </div>
             <button class="button profile__add" aria-label="add" type="button"></button>
         </section>
 
         <section class="elements">
             <ul class="grid">
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/yosemite-valley.jpg" alt="yosemite valley">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Yosemite valley</h2>
-                        <button class="grid__heart" aria-label="heart button" type="button"></button>
-                    </div>
-                </li>
-
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/lake-loius.png" alt="lake louise">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Lake Louise</h2>
-                        <button class="grid__heart" aria-label="heart button"></button>
-                    </div>
-                </li>
-
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/bald-mountains.png" alt="bald-mountains">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Bald Mountains</h2>
-                        <button class="grid__heart" aria-label="heart button"></button>
-                    </div>
-                </li>
-
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/latermar.png" alt="latemar">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Latemar</h2>
-                        <button class="grid__heart" aria-label="heart button"></button>
-                    </div>
-                </li>
-
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/vanois-national.png" alt="vanois national">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Vanois National</h2>
-                        <button class="grid__heart" aria-label="heart button"></button>
-                    </div>
-                </li>
-
-                <li class="grid__card">
-                    <img class="grid__pic" src="./images/lago-di-braies.png" alt="lago di braies">
-                    <div class="grid__text">
-                        <h2 class="grid__name">Lago Di Braies</h2>
-                        <button class="grid__heart" aria-label="heart button"></button>
-                    </div>
-                </li>
             </ul>
         </section>
     </main>
@@ -85,19 +35,82 @@
     <footer class="footer">
         <p class="footer__copyright"> &copy; 2020 Around The U.S.</p>
     </footer>
-    <div class="popup popup_closed">
+
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
-            <button class="button popup__close" aria-label="close" type="button"></button>
-            <!--changed-->
-            <form name="editProfile" action="#" class="popup__form">
-                <h2 class="popup__edit">Edit Profile</h2>
-                <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required>
-                <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required>
-                <button class="button popup__submit" type="submit">Save</button>
+            <button class="popup__close" aria-label="close" type="button"></button>
+            <h2 class="popup__edit">Edit Profile</h2>
+            <form action="#" name="editProfile" class="popup__form">
+                <input class="popup__input popup__input_type_name" type="text" value=" " name="name" placeholder="Name" required>
+                <input class="popup__input popup__input_type-about" type="text" value=" " name="aboutme" placeholder="About me" required>
+                <button class="popup__submit" type="submit">Save</button>
             </form>
         </div>
     </div>
+    <div class="popup popup_type_add-card">
+        <div class="popup__container">
+            <button class="popup__close" aria-label="close" type="button"></button> v
+            <h2 class="popup__edit">New place</h2>
+            <form action="#" name="editProfile" class="popup__form"></form>
+            <input class="popup__input popup__input_type_title" type="text" value=" " name="name" placeholder="Title" required>
+            <input class="popup__input popup__input_type_url" type="url" value=" " name="about" placeholder="Image link" required>
+            <button class="button popup__submit" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!--popup image-->
+    <div class="popup popup_type_image">
+        <div class="popup__image-container">
+            <button class="popup__image-close-btn" type="button"></button>
+            <figure class="popup__figure">
+                <img class="popup__image" alt="" src="">
+                <figcaption class="popup__image-title"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!--tamplate-->
+    <template class="card-template">
+        <li class="grid__card">
+            <button class="grid__delete" aria-label="delete button" type="button"></button>
+            <img class="grid__pic" src="images" alt="elements image">
+            <div class="grid__text">
+                <h2 class="grid__name"></h2>
+                <button class="grid__heart" aria-label="heart button" type="button"></button>
+            </div>
+        </li>
+        </template>
     <script src="./scripts/index.js"></script>
 </body>
 
 </html>
+
+</html>
+<!--<div class="popup popup_type_edit-profile">
+        <div class="popup__container">
+            <button class="button popup__close" aria-label="close" type="button"></button>
+            
+    <form name="editProfile" action="#" class="popup__form">
+        <h2 class="popup__edit">Edit Profile</h2>
+        <input class="popup__input popup__input_type_name" type="text" value=" " name="name" placeholder="Name" required>
+        <input class="popup__input popup__input_type-about" type="text" value=" " name="aboutme" placeholder="About me" required>
+        <button class="button popup__submit" type="submit">Save</button>
+    </form>
+    </div>
+    </div>-->
+<!--<div class="popup popup_type_edit-profile">-->
+<!--second popup
+    <div class="popup popup_type_add-card">
+        <div class="popup__container">
+            <button class="button popup__close" aria-label="close" type="button"></button>
+            <h2 class="popup__edit">New place</h2>
+
+            <form name="editProfile" action="#" class="popup__form">
+                <input class="popup__input popup__input_type_title" type="text" value=" " name="name" placeholder="Title" required>
+                <input class="popup__input popup__input_type_url" type="url" value=" " name="about" placeholder="Image link" required> adding the card add option
+
+                <button class="button popup__submit" type="submit">Save</button>
+            </form>
+        </div>
+    </div>-->

@@ -15,6 +15,11 @@
     opacity: 50%;
 }
 
+.grid__heart_active {
+    background-image: url('../../../images/heartactive.svg');
+    border: none;
+}
+
 
 /*.cards__text-heart{
     background-image: url("../../../images/heart.png");
