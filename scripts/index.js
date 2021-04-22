@@ -3,8 +3,10 @@ const editProfileModalWindow = document.querySelector('.popup_type_edit-profile'
 const addCardModalWindow = document.querySelector('.popup_type_add-card');
 const imageModalWindow = document.querySelector('.popup_type_image');
 const form = document.querySelector('.popup__form');
+
 const editButton = document.querySelector('.profile__edit');
 const addCardModalButton = document.querySelector('.profile__add');
+
 const closeButton = editProfileModalWindow.querySelector('.popup__close');
 const closeAddCardModalButton = addCardModalWindow.querySelector('.popup__close');
 const imagePopupCloseButton = imageModalWindow.querySelector('.popup__image-close-btn');
@@ -127,7 +129,7 @@ function addCard(data) {
         popupSrc.src = item.link;
         popupTitle.textContent = item.name;
         popupSrc.alt = item.name;
-    }) */
+    })*/
     cardImage.addEventListener('click', () => {
         const popupImage = imageModalWindow.querySelector('.popup__image');
         const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
@@ -159,27 +161,28 @@ addCardSubmitButton.addEventListener('click', (event) => {
         addCard({ name: inputCardTitle.value, link: inputCardLink.value });
         togglePopup(addCardModalWindow);
     })
-    //Modal Popup//
-function showPopup() {
-    showPopup.classList.remove('popup_is-open')
-    inputName.value = profileName.textContent
-    inputDesc.value = profileDesc.textContent
-};
+    /*
+        //Modal Popup//
+    function showPopup() {
+        showPopup.classList.remove('popup_is-open')
+        inputName.value = profileName.textContent
+        inputDesc.value = profileDesc.textContent
+    };
 
-function closePopup() {
-    showPopup.classList.add('popup_is-open')
-};
+    function closePopup() {
+        showPopup.classList.add('popup_is-open')
+    };
 
-function handleFormSubmit(evt) {
-    evt.preventDefault();
-    profileName.textContent = inputName.value;
-    profileDesc.textContent = inputDesc.value;
-    closePopup();
-};
+    function handleFormSubmit(evt) {
+        evt.preventDefault();
+        profileName.textContent = inputName.value;
+        profileDesc.textContent = inputDesc.value;
+        closePopup();
+    };
 
-form.addEventListener('submit', handleFormSubmit);
+    form.addEventListener('submit', handleFormSubmit);
 
 
 
-showButton.addEventListener('click', showPopup);
-closeButton.addEventListener('click', closePopup); * /
+    showButton.addEventListener('click', showPopup);
+    closeButton.addEventListener('click', closePopup); */
