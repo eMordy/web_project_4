@@ -2,29 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Around The U.S.</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
 <body class="page">
     <header class="header">
-        <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo">
+        <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo" />
     </header>
     <main class="content">
-
         <section class="profile">
-            <img class="profile__picture" src="./images/profile.jpg" alt="profile-picture">
+            <img class="profile__picture" src="./images/profile.jpg" alt="profile-picture" />
 
             <div class="profile__info">
                 <div class="profile__container">
-
                     <h1 class="profile__info-name">Jacques Cousteau</h1>
                     <button class="profile__edit button" aria-label="edit" type="button"></button>
                 </div>
                 <h2 class="profile__about-me">Explorer</h2>
-
             </div>
             <button class="button profile__add" aria-label="add" type="button"></button>
         </section>
@@ -35,16 +32,15 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__copyright"> &copy; 2020 Around The U.S.</p>
+        <p class="footer__copyright">&copy; 2020 Around The U.S.</p>
     </footer>
     <div class="popup popup_closed popup_type_edit-profile">
-        <!---if remove popupclosed the popup wont go-->
         <div class="popup__container">
             <button class="popup__close" aria-label="close" type="button"></button>
             <form name="editProfile" action="#" class="popup__form">
                 <h2 class="popup__edit">Edit Profile</h2>
-                <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required>
-                <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required>
+                <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required />
+                <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required />
                 <button class="button popup__submit" type="submit">Save</button>
             </form>
         </div>
@@ -55,13 +51,13 @@
             <button class="popup__close" aria-label="close" type="button"></button>
             <form name="editProfile" action="#" class="popup__form">
                 <h2 class="popup__edit">New place</h2>
-                <input class="popup__input popup__input_type_title" type="text" value="" name="name" placeholder="Title" required>
-                <input class="popup__input popup__input_type-url" type="url" value="" name="aboutme" placeholder="Image link" required>
+                <input class="popup__input popup__input_type_title" type="text" value="" name="name" placeholder="Title" required />
+                <input class="popup__input popup__input_type-url" type="url" value="" name="aboutme" placeholder="Image link" required />
                 <button class="button popup__submit" type="submit">Save</button>
             </form>
         </div>
     </div>
-    <!-- not working
+    <!-- not working dont know whyy :(
     <div class="popup popup_type-image">
         <div class="popup__image-container">
             <button class="popup__close" type="button"></button>
@@ -74,104 +70,16 @@
 
     <!--tamplate-->
     <template class="card-template">
-        <li class="grid__card">
-            <button class="grid__delete" aria-label="delete button" type="button"></button>
-            <img class="grid__pic" src="images" alt="elements image">
-            <div class="grid__text">
-                <h2 class="grid__name"></h2>
-                <button class="grid__heart" aria-label="heart button" type="button"></button>
-            </div>
-        </li>
+            <li class="grid__card">
+                <button class="grid__delete" aria-label="delete button" type="button"></button>
+                <img class="grid__pic" src="images" alt="elements image" />
+                <div class="grid__text">
+                    <h2 class="grid__name"></h2>
+                    <button class="grid__heart" aria-label="heart button" type="button"></button>
+                </div>
+            </li>
         </template>
     <script src="./scripts/index.js"></script>
 </body>
 
 </html>
-
-<!-- old
-    <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Around The U.S.</title>
-    <link rel="stylesheet" href="./pages/index.css">
-</head>
-
-<body class="page">
-    <header class="header">
-        <img class="logo" src="./images/Vectorlogo.svg" alt="header-logo">
-    </header>
-    <main class="content">
-        <section class="profile">
-            <img class="profile__picture" src="./images/profile.jpg" alt="profile-picture">
-
-            <div class="profile__info">
-                <div class="profile__container">
-                    <h1 class="profile__info-name">Jacques Cousteau</h1>
-                    <button class="profile__edit button" aria-label="edit" type="button"></button>
-                </div>
-                <h2 class="profile__about-me">Explorer</h2>
-            </div>
-            <button class="button profile__add" aria-label="add" type="button"></button>
-        </section>
-
-        <section class="elements">
-            <ul class="grid">
-            </ul>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footer__copyright"> &copy; 2020 Around The U.S.</p>
-    </footer>
-
-    <div class="popup popup_type_edit-profile">
-        <div class="popup__container">
-            <button class="popup__close" aria-label="close" type="button"></button>
-            <h2 class="popup__edit">Edit Profile</h2>
-            <form action="#" name="editProfile" class="popup__form">
-                <input class="popup__input popup__input_type_name" type="text" value=" " name="name" placeholder="Name" required>
-                <input class="popup__input popup__input_type-about" type="text" value=" " name="aboutme" placeholder="About me" required>
-                <button class="popup__submit" type="submit">Save</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="popup popup_type_add-card">
-        <div class="popup__container">
-            <button class="popup__close" aria-label="close" type="button"></button>
-            <h2 class="popup__edit">New place</h2>
-            <form action="#" name="editProfile" class="popup__form"></form>
-            <input class="popup__input popup__input_type_title" type="text" value=" " name="name" placeholder="Title" required>
-            <input class="popup__input popup__input_type_url" type="url" value=" " name="about" placeholder="Image link" required>
-            <button class="button popup__submit" type="submit">Save</button>
-            </form>
-        </div>
-    </div>
-
-<div class="popup popup_type_image">
-    <div class="popup__image-container">
-        <button class="popup__image-close-btn" type="button"></button>
-        <figure class="popup__figure">
-            <img class="popup__image" alt="" src="">
-            <figcaption class="popup__image-title"></figcaption>
-        </figure>
-    </div>
-</div>
-
-<template class="card-template">
-        <li class="grid__card">
-            <button class="grid__delete" aria-label="delete button" type="button"></button>
-            <img class="grid__pic" src="images" alt="elements image">
-            <div class="grid__text">
-                <h2 class="grid__name"></h2>
-                <button class="grid__heart" aria-label="heart button" type="button"></button>
-            </div>
-        </li>
-        </template>
-<script src="./scripts/index.js"></script>
-</body>
-
-</html>-->
