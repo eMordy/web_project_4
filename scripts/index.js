@@ -121,7 +121,7 @@ function createCard(data) {
 
     cardImage.addEventListener("click", () => {
         const popupImage = imageModalWindow.querySelector(".popup__image");
-        const popupImageTitle = imageModalWindow.querySelector(".popup__image_title");
+        const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
 
         popupImage.src = data.link;
         popupImageTitle.textContent = data.name;
