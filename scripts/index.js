@@ -9,7 +9,9 @@ const closeButton = editProfileModalWindow.querySelector(".popup__close"); //clo
 const closeAddCardButton = addCardModalWindow.querySelector(".popup__close"); // close add
 const closeImageButton = imageModalWindow.querySelector(".popup__close"); //something not good with imagemodal..
 
-const saveButton = document.querySelector(".popup__submit");
+// const saveButton = document.querySelector(".popup__submit");
+const addSubmitButton = addCardModalWindow.querySelector(".popup__submit");
+
 //profile
 const profileName = document.querySelector(".profile__info-name"); //title name
 const profileAbout = document.querySelector(".profile__about-me"); //title des
@@ -60,6 +62,7 @@ closeButton.addEventListener("click", () => {
 addButton.addEventListener("click", () => {
     toggleModalWindow(addCardModalWindow);
 });
+
 closeAddCardButton.addEventListener("click", () => {
     toggleModalWindow(addCardModalWindow);
 });
@@ -96,6 +99,7 @@ const initialCards = [{
 initialCards.forEach(data => createCard(data))
 
 function createCard(data) {
+
     const cardTemplate = document.querySelector(".card-template").content.querySelector(".grid__card");
     const list = document.querySelector(".grid");
     const cardElement = cardTemplate.cloneNode(true);
@@ -129,19 +133,23 @@ function createCard(data) {
     })
 
     list.prepend(cardElement);
+
 }
+
 closeImageButton.addEventListener('click', () => {
     toggleModalWindow(imageModalWindow)
 });
-// initialCards.forEach(data => createCard(data));
-saveButton.addEventListener('click', (event) => {
-    event.preventDefault();
 
+// initialCards.forEach(data => createCard(data));
+
+addSubmitButton.addEventListener('click', (event) => {
+    event.preventDefault();
 
     createCard({ name: titleInput.value, link: linkInput.value });
 
     toggleModalWindow(addCardModalWindow);
 });
+
 // first try
 // //wrappers
 // const addCardModalWindow = document.querySelector(".popup_type_add-card");
