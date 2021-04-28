@@ -1,3 +1,5 @@
+@import url('./_container/popup__image-container.css');
+@import url('./_title/popup__image-title.css');
 .popup__image {
     max-width: 75vw;
     max-height: 75vh;

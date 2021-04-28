@@ -34,10 +34,10 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Around The U.S.</p>
     </footer>
-    <div class="popup popup_closed popup_type_edit-profile">
+    <div class="popup  popup_type_edit-profile">
         <div class="popup__container">
             <button class="popup__close" aria-label="close" type="button"></button>
-            <form name="editProfile" action="#" class="popup__form">
+            <form name="new" action="#" class="popup__form">
                 <h2 class="popup__edit">Edit Profile</h2>
                 <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required />
                 <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required />
@@ -46,36 +46,37 @@
         </div>
     </div>
 
-    <div class="popup popup_closed popup_type_add-card">
+    <div class="popup  popup_type_add-card">
         <div class="popup__container">
             <button class="popup__close" aria-label="close" type="button"></button>
-            <form name="editProfile" action="#" class="popup__form">
+            <form name="add" action="#" class="popup__form">
                 <h2 class="popup__edit">New place</h2>
                 <input class="popup__input popup__input_type_title" type="text" value="" name="name" placeholder="Title" required />
                 <input class="popup__input popup__input_type-url" type="url" value="" name="aboutme" placeholder="Image link" required />
+                <!--\changingtype sybmit totype btn prevent from ref -->
                 <button class="button popup__submit" type="submit">Save</button>
             </form>
         </div>
     </div>
-    <!-- not working dont know whyy :(
+
     <div class="popup popup_type-image">
         <div class="popup__image-container">
             <button class="popup__close" type="button"></button>
             <figure class="popup__figure">
-                <img class="popup__image" alt="" src="">
-                <figcaption class="popup__image-title"></figcaption>
+                <img class="popup__image" src="" alt="">
+                <figcaption class="popup__image_caption"></figcaption>
             </figure>
         </div>
-    </div>-->
+    </div>
 
     <!--tamplate-->
     <template class="card-template">
             <li class="grid__card">
-                <button class="grid__delete" aria-label="delete button" type="button"></button>
-                <img class="grid__pic" src="images" alt="elements image" />
+                <button class="grid__delete" aria-label="delete button" type="button "></button>
+                <img class="grid__pic" src="images " alt="elements image " />
                 <div class="grid__text">
                     <h2 class="grid__name"></h2>
-                    <button class="grid__heart" aria-label="heart button" type="button"></button>
+                    <button class="grid__heart" aria-label="heart button " type="button "></button>
                 </div>
             </li>
         </template>

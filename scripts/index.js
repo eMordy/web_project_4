@@ -3,21 +3,26 @@ const addCardModalWindow = document.querySelector(".popup_type_add-card");
 const editProfileModalWindow = document.querySelector(".popup_type_edit-profile");
 const imageModalWindow = document.querySelector(".popup_type_image");
 //buttons
-const showButton = document.querySelector(".profile__edit");
-const closeButton = document.querySelector(".popup__close");
-const addButton = document.querySelector(".profile__add");
+const showButton = document.querySelector(".profile__edit"); //open edit
+const addButton = document.querySelector(".profile__add"); // big plus btn
+// const closeButton = document.querySelector(".popup__close"); //close edit
+const closeButton = editProfileModalWindow.querySelector(".popup__close"); //close edit
 const closeAddCardButton = addCardModalWindow.querySelector(".popup__close");
-const saveButton = document.querySelector(".popup__submit");
+//const saveButton = document.querySelector(".popup__submit"); no need?
 //profile
-const profileName = document.querySelector(".profile__info-name");
-const profileAbout = document.querySelector(".profile__about-me");
+const profileName = document.querySelector(".profile__info-name"); //title name
+const profileAbout = document.querySelector(".profile__about-me"); //title des
 //popup inpurt
-const modalWindow = document.querySelector(".popup");
-const editForm = document.querySelector(".popup__container");
-const nameInput = document.querySelector(".popup__input_type_name");
-const workInput = document.querySelector(".popup__input_type-about");
+//const modalWindow = document.querySelector(".popup"); no need?
+//const editForm = document.querySelector(".popup__container"); mistake?
+const editForm = document.querySelector(".popup__form");
 
-// edit pen popup
+const nameInput = document.querySelector(".popup__input_type_name"); //input
+const workInput = document.querySelector(".popup__input_type-about"); //input
+
+
+
+// edit pen popup- toggles the state of the modal
 function toggleModalWindow(modal) {
     modal.classList.toggle("popup_closed");
 }
@@ -37,6 +42,8 @@ showButton.addEventListener("click", () => {
     toggleModalWindow(editProfileModalWindow);
 });
 
+//closeButton.addEventListener('click', toggleModalWindow); // 21:12 vid
+
 closeButton.addEventListener("click", () => {
     toggleModalWindow(editProfileModalWindow);
 });
@@ -47,6 +54,7 @@ addButton.addEventListener("click", () => {
 closeAddCardButton.addEventListener("click", () => {
     toggleModalWindow(addCardModalWindow);
 });
+
 //cards
 
 const initialCards = [{
@@ -78,7 +86,7 @@ const initialCards = [{
 const cardTemplate = document.querySelector(".card-template").content.querySelector(".grid__card");
 const list = document.querySelector(".grid");
 
-initialCards.forEach((data) => {
+initialCards.forEach(data => {
     const cardElement = cardTemplate.cloneNode(true);
     const cardImage = cardElement.querySelector(".grid__pic");
     const cardTitle = cardElement.querySelector(".grid__name");
@@ -90,10 +98,11 @@ initialCards.forEach((data) => {
 
     cardLikeButton.addEventListener("click", () => {
         cardLikeButton.classList.toggle("grid__heart_active");
-    });
+    })
     cardDeleteButton.addEventListener("click", () => {
         cardElement.remove();
-    });
+    })
+
 
     cardImage.addEventListener("click", () => {
         const popupImage = imageModalWindow.querySelector(".popup__image");
@@ -102,11 +111,20 @@ initialCards.forEach((data) => {
         popupImage.src = data.link;
         popupImageTitle.textContent = data.name;
 
-        // test
-        //  toggleModalWindow(imageModalWindow)
-        //imageModalWindow.classList.add("popup_closed")
-        togglePopup(imageModalWindow);
-    });
+        toggleModalWindow(imageModalWindow)
+            // test
+            // imageModalWindow.classList.add("popup_closed")
+            // toggleModalWindow(imageModalWindow);
+    })
 
     list.prepend(cardElement);
-});
+    //return cardElement;
+    // window.addEventListener("load", function() {
+    //     initialCards.forEach(data => {
+    //         addCard(data);
+    //         cardElement = addCard(data);
+    //         list.prepend(cardElement);
+    //     })
+    // });
+
+})
