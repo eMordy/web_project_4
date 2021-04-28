@@ -1,13 +1,13 @@
 //wrappers
 const addCardModalWindow = document.querySelector(".popup_type_add-card");
 const editProfileModalWindow = document.querySelector(".popup_type_edit-profile");
-const imageModalWindow = document.querySelector(".popup_type_image");
+const imageModalWindow = document.querySelector(".popup_type-image");
 //buttons
 const showButton = document.querySelector(".profile__edit"); //open edit
 const addButton = document.querySelector(".profile__add"); // big plus btn
 const closeButton = editProfileModalWindow.querySelector(".popup__close"); //close edit
 const closeAddCardButton = addCardModalWindow.querySelector(".popup__close"); // close add
-//const closeImageButton = imageModalWindow.querySelector(".popup__close"); //something not good with imagemodal..
+const closeImageButton = imageModalWindow.querySelector(".popup__close"); //something not good with imagemodal..
 
 const saveButton = document.querySelector(".popup__submit");
 //profile
@@ -117,7 +117,7 @@ function createCard(data) {
 
     cardImage.addEventListener("click", () => {
         const popupImage = imageModalWindow.querySelector(".popup__image");
-        const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
+        const popupImageTitle = imageModalWindow.querySelector(".popup__image_title");
 
         popupImage.src = data.link;
         popupImageTitle.textContent = data.name;
