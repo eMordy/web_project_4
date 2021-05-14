@@ -36,11 +36,15 @@
     </footer>
     <div class="popup  popup_type_edit-profile">
         <div class="popup__container">
-            <button class="popup__close" aria-label="close" type="button"></button>
-            <form name="new" action="#" class="popup__form">
+            <button class="popup__close popup__close_edit-profile" aria-label="close" type="button"></button>
+            <form name="new" action="#" class="popup__form popup__form_type_edit" novalidate>
                 <h2 class="popup__edit">Edit Profile</h2>
-                <input class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required />
-                <input class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required />
+                <input id="profile-name" class="popup__input popup__input_type_name" type="text" value="" name="name" placeholder="Name" required minlength="2" maxlength="40" />
+                <span id="profile-name-error" class="popup__error"></span>
+
+                <input id="profile-text" class="popup__input popup__input_type-about" type="text" value="" name="aboutme" placeholder="About me" required minlength="2" maxlength="200" />
+                <span id="profile-text-error" class="popup__error"></span>
+
                 <button class="button popup__submit" type="submit">Save</button>
             </form>
         </div>
@@ -48,13 +52,16 @@
 
     <div class="popup  popup_type_add-card">
         <div class="popup__container">
-            <button class="popup__close" aria-label="close" type="button"></button>
-            <form name="add" action="#" class="popup__form">
+            <button class="popup__close popup__close_add-card" aria-label="close" type="button"></button>
+            <form name="add" action="#" class="popup__form popup__form_type_add" novalidate>
                 <h2 class="popup__edit">New place</h2>
-                <input class="popup__input popup__input_type_title" type="text" value="" name="name" placeholder="Title" required />
-                <input class="popup__input popup__input_type-url" type="url" value="" name="aboutme" placeholder="Image link" required />
-                <!--\changingtype sybmit totype btn prevent from ref -->
-                <button class="button popup__submit" type="submit">Save</button>
+                <input id="card-title" class="popup__input popup__input_type_title" type="text" value="" name="name" placeholder="Title" required minlength="1" maxlength="30" />
+                <span id="card-title-error" class="popup__error"></span>
+
+                <input id="card-url" class="popup__input popup__input_type-url" type="url" value="" name="aboutme" placeholder="Image link" required />
+                <span id="card-url-error" class="popup__error"></span>
+
+                <button class="button popup__submit popup__submit_add-card" type="submit">Save</button>
             </form>
         </div>
     </div>
@@ -68,7 +75,8 @@
             </figure>
         </div>
     </div>
-
+    <script src="./scripts/validation.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
     <!--tamplate-->
     <template class="card-template">
             <li class="grid__card">
@@ -80,7 +88,8 @@
                 </div>
             </li>
         </template>
-    <script src="./scripts/index.js"></script>
+    <!--  <script src="./scripts/validation.js" defer></script>
+    <script src="./scripts/index.js" defer></script>-->
 </body>
 
 </html>
