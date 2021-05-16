@@ -6,7 +6,7 @@ const validateSettings = {
     inputErrorClass: "popup__input_error", //need to turn red
     errorClass: "popup__error_visible",
 };
-// if i add validateSettings its not red anymote
+
 
 
 const showErrorMessage = (inputElement, formElement, errorMessage) => {
@@ -15,7 +15,7 @@ const showErrorMessage = (inputElement, formElement, errorMessage) => {
     inputElement.classList.add(validateSettings.inputErrorClass);
     errorElement.textContent = errorMessage;
 };
-//po
+
 const hideErrorMessage = (inputElement, formElement) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.classList.remove(validateSettings.errorClass);
@@ -36,7 +36,7 @@ const isValid = (inputList) => {
         return !inputElement.validity.valid;
     });
 };
-// po
+
 const toggleButtonState = (inputList, buttonElement) => {
     if (isValid(inputList)) {
         buttonElement.classList.add(validateSettings.inactiveButtonClass);
@@ -47,7 +47,7 @@ const toggleButtonState = (inputList, buttonElement) => {
 
     }
 };
-//po
+
 const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(validateSettings.inputSelector));
     const buttonElement = formElement.querySelector(validateSettings.submitButtonSelector);
