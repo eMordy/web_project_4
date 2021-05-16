@@ -7,16 +7,14 @@ const validateSettings = {
     errorClass: "popup__error_visible",
 };
 
-
-
-const showErrorMessage = (inputElement, formElement, errorMessage) => {
+const showErrorMessage = (inputElement, formElement, errorMessage, errorClass, inputErrorClass) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.classList.add(validateSettings.errorClass);
     inputElement.classList.add(validateSettings.inputErrorClass);
     errorElement.textContent = errorMessage;
 };
 
-const hideErrorMessage = (inputElement, formElement) => {
+const hideErrorMessage = (inputElement, formElement, errorClass, inputErrorClass) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.classList.remove(validateSettings.errorClass);
     inputElement.classList.remove(validateSettings.inputErrorClass);
@@ -37,7 +35,7 @@ const isValid = (inputList) => {
     });
 };
 
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     if (isValid(inputList)) {
         buttonElement.classList.add(validateSettings.inactiveButtonClass);
         buttonElement.disabled = true;
@@ -48,7 +46,7 @@ const toggleButtonState = (inputList, buttonElement) => {
     }
 };
 
-const setEventListeners = (formElement) => {
+const setEventListeners = (formElement, validateSettings) => {
     const inputList = Array.from(formElement.querySelectorAll(validateSettings.inputSelector));
     const buttonElement = formElement.querySelector(validateSettings.submitButtonSelector);
 
