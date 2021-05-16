@@ -11,18 +11,16 @@ const validateSettings = {
 
 const showErrorMessage = (inputElement, formElement, errorMessage) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-
-    errorElement.textContent = errorMessage;
     errorElement.classList.add(validateSettings.errorClass);
     inputElement.classList.add(validateSettings.inputErrorClass);
-
+    errorElement.textContent = errorMessage;
 };
 //po
 const hideErrorMessage = (inputElement, formElement) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-    errorElement.textContent = " ";
     errorElement.classList.remove(validateSettings.errorClass);
     inputElement.classList.remove(validateSettings.inputErrorClass);
+    errorElement.textContent = " ";
 
 };
 
@@ -30,7 +28,7 @@ const checkInputValidity = (inputElement, formElement) => {
     if (!inputElement.validity.valid) {
         showErrorMessage(inputElement, formElement, inputElement.validationMessage);
     } else {
-        hideErrorMessage(inputElement, formElement, validateSettings);
+        hideErrorMessage(inputElement, formElement);
     }
 };
 const isValid = (inputList) => {
@@ -65,14 +63,16 @@ const setEventListeners = (formElement) => {
 
 };
 
-const enableValidation = (validateSettings) => {
+
+//work
+const enableValidation = (validateSettings) => { // put inside brackets
     const formList = Array.from(document.querySelectorAll(validateSettings.formSelector));
 
     formList.forEach((formElement) => {
         formElement.addEventListener("submit", (e) => {
             e.preventDefault();
-        }); //po
-        setEventListeners(formElement);
+        });
+        setEventListeners(formElement, validateSettings); //put as second
     });
 };
-enableValidation(validateSettings);
+enableValidation(validateSettings); // left as it is
