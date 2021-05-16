@@ -1,4 +1,14 @@
+const validateSettings = {
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__submit",
+    inactiveButtonClass: "popup__submit_disable",
+    inputErrorClass: "popup__input_error", //need to turn red
+    errorClass: "popup__error_visible",
+};
 // if i add validateSettings its not red anymote
+
+
 const showErrorMessage = (inputElement, formElement, errorMessage) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 
@@ -7,7 +17,7 @@ const showErrorMessage = (inputElement, formElement, errorMessage) => {
     inputElement.classList.add(validateSettings.inputErrorClass);
 
 };
-
+//po
 const hideErrorMessage = (inputElement, formElement) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.textContent = " ";
@@ -20,7 +30,7 @@ const checkInputValidity = (inputElement, formElement) => {
     if (!inputElement.validity.valid) {
         showErrorMessage(inputElement, formElement, inputElement.validationMessage);
     } else {
-        hideErrorMessage(inputElement, formElement);
+        hideErrorMessage(inputElement, formElement, validateSettings);
     }
 };
 const isValid = (inputList) => {
@@ -28,7 +38,7 @@ const isValid = (inputList) => {
         return !inputElement.validity.valid;
     });
 };
-
+// po
 const toggleButtonState = (inputList, buttonElement) => {
     if (isValid(inputList)) {
         buttonElement.classList.add(validateSettings.inactiveButtonClass);
@@ -39,7 +49,7 @@ const toggleButtonState = (inputList, buttonElement) => {
 
     }
 };
-
+//po
 const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(validateSettings.inputSelector));
     const buttonElement = formElement.querySelector(validateSettings.submitButtonSelector);
@@ -59,20 +69,10 @@ const enableValidation = (validateSettings) => {
     const formList = Array.from(document.querySelectorAll(validateSettings.formSelector));
 
     formList.forEach((formElement) => {
-
         formElement.addEventListener("submit", (e) => {
             e.preventDefault();
-        });
-
+        }); //po
         setEventListeners(formElement);
     });
 };
-const validateSettings = {
-    formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__submit_disable",
-    inputErrorClass: "popup__input_error", //need to turn red
-    errorClass: "popup__error_visible",
-}
 enableValidation(validateSettings);
