@@ -1,4 +1,4 @@
-import "./index.css";
+import "../pages/index.css";
 import FormValidator from "../components/FormValidator";
 import Card from "../components/Card";
 import PopupWithImage from "../components/PopupWithImage";
@@ -19,21 +19,6 @@ const userInfo = new UserInfo({
     workSelector: profileAbout
 });
 
-
-function createCard(data) {
-    const card = new Card({
-        data,
-        handleCardClick: ({
-            name,
-            link
-        }) => {
-            imagePopup.open({ name, link });
-        }
-    }, cardTemplate);
-    return card.generateCard();
-}
-
-
 // edit form 
 const editFormPopup = new PopupWithForm({
     popupSelector: editProfileModalWindow,
@@ -51,6 +36,18 @@ showButton.addEventListener("click", () => {
     editFormValidator.resetValidation();
 })
 
+function createCard(data) {
+    const card = new Card({
+        data,
+        handleCardClick: ({
+            name,
+            link
+        }) => {
+            imagePopup.open({ name, link });
+        }
+    }, cardTemplate);
+    return card.generateCard();
+}
 
 //img popup
 const imagePopup = new PopupWithImage(imageModalWindow);
