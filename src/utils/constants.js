@@ -25,13 +25,8 @@ export const linkInput = addCardModalWindow.querySelector(".popup__input_type-ur
 export const list = document.querySelector(".grid");
 export const popupImage = imageModalWindow.querySelector(".popup__image");
 export const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
-
-
-// check
-
 export const cardTemplate = "#card-template";
-export const imageGrid = ".image-grid";
-// check
+
 
 //cards 
 export const initialCards = [{
