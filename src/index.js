@@ -1,11 +1,11 @@
-import "../pages/index.css";
-import FormValidator from "../components/FormValidator";
-import Card from "../components/Card";
-import PopupWithImage from "../components/PopupWithImage";
-import PopupWithForm from "../components/PopupWithForm";
-import Section from "../components/Section";
-import UserInfo from "../components/UserInfo";
-import { settings, showButton, editForm, addButton, addCardForm, nameInput, workInput, initialCards, profileName, profileAbout, editProfileModalWindow, addCardModalWindow, imageModalWindow, cardTemplate, list } from "../utils/constants.js";
+import "./pages/index.css";
+import FormValidator from "./components/FormValidator";
+import Card from "./components/Card";
+import Section from "./components/Section";
+import PopupWithImage from "./components/PopupWithImage";
+import PopupWithForm from "./components/PopupWithForm";
+import UserInfo from "./components/UserInfo";
+import { settings, showButton, editForm, addButton, addCardForm, nameInput, workInput, initialCards, profileName, profileAbout, editProfileModalWindow, addCardModalWindow, imageModalWindow, cardTemplate, list } from "./utils/constants.js"
 
 const editFormValidator = new FormValidator(settings, editForm);
 const addFormValidator = new FormValidator(settings, addCardForm);
@@ -13,13 +13,13 @@ const addFormValidator = new FormValidator(settings, addCardForm);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
-// user info
+//user info
 const userInfo = new UserInfo({
     nameSelector: profileName,
     workSelector: profileAbout
 });
 
-// edit form 
+//edit form 
 const editFormPopup = new PopupWithForm({
     popupSelector: editProfileModalWindow,
     handleFormSubmit: (data) => {

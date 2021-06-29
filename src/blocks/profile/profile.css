@@ -5,6 +5,7 @@
 @import url('./__info-name/profile__info-name.css');
 @import url('./__info/profile__info.css');
 @import url('./__picture/profile__picture.css');
+
 .profile {
     max-width: 880px;
     margin: 40px auto 46.25px;
@@ -26,7 +27,7 @@
     .profile {
         /* width: 288px;
     flex-direction: column;
-    margin-top: 38px; לבדוק אם אפשר לשנות פשוט את המרגין
+    margin-top: 38px; לבדוק לשנות פשוט את המרגין
   */
         margin: 0 auto;
         margin: 38px auto 36px;

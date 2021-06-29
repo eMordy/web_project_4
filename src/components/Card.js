@@ -1,7 +1,3 @@
-// import { openModalWindow, popupImage, imageModalWindow, popupImageTitle } from "./index.js";
-
-
-
 export default class Card {
     constructor({ data, handleCardClick }, templateSelector) {
         this._link = data.link;

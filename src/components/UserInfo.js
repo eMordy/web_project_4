@@ -4,7 +4,6 @@ export default class UserInfo {
         this._workElement = workSelector;
     }
 
-
     getUserInfo() {
         return {
             title: this._nameElement.textContent,
