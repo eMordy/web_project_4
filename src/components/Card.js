@@ -35,11 +35,11 @@ export default class Card {
             const deleteButton = this._element.querySelector(".grid__delete");
             deleteButton.closest(".grid__card").remove();
         }
-        // _cardImage() {
+        // _handleCardClick() {
         //     popupImage.src = this._link;
         //     popupImage.alt = this._name;
         //     popupImageTitle.textContent = this._name;
-        //     openModalWindow(imageModalWindow);
+        //     openModalWindow(imageModalWindow); //open
         // }
 
     generateCard() {

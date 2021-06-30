@@ -49,23 +49,6 @@ function createCard(data) {
     return card.generateCard();
 }
 
-//img popup
-const imagePopup = new PopupWithImage(imageModalWindow);
-imagePopup.setEventListeners();
-
-// add card popup
-const addImagePopup = new PopupWithForm({
-    popupSelector: addCardModalWindow,
-    handleFormSubmit: (data) => {
-        const cardElement = createCard(data);
-        cardList.addItems(cardElement);
-    }
-});
-addImagePopup.setEventListeners();
-addButton.addEventListener("click", () => {
-    addImagePopup.open();
-    addFormValidator.resetValidation();
-});
 
 const cardList = new Section({
         items: initialCards,
@@ -77,3 +60,22 @@ const cardList = new Section({
     list);
 
 cardList.renderItems();
+
+// add card popup
+const addImagePopup = new PopupWithForm({
+    popupSelector: addCardModalWindow,
+    handleFormSubmit: (data) => {
+        const cardElement = createCard(data);
+        cardList.addItems(cardElement);
+    }
+});
+addImagePopup.setEventListeners();
+
+
+addButton.addEventListener("click", () => {
+    addImagePopup.open();
+    addFormValidator.resetValidation();
+});
+// //img popup- avar lemala
+const imagePopup = new PopupWithImage(imageModalWindow);
+imagePopup.setEventListeners();
