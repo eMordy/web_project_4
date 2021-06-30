@@ -1,11 +1,11 @@
-import "./pages/index.css";
-import FormValidator from "./components/FormValidator";
-import Card from "./components/Card";
-import Section from "./components/Section";
-import PopupWithImage from "./components/PopupWithImage";
-import PopupWithForm from "./components/PopupWithForm";
-import UserInfo from "./components/UserInfo";
-import { settings, showButton, editForm, addButton, addCardForm, nameInput, workInput, initialCards, profileName, profileAbout, editProfileModalWindow, addCardModalWindow, imageModalWindow, cardTemplate, list } from "./utils/constants.js"
+import "./index.css";
+import FormValidator from "../components/FormValidator";
+import Card from "../components/Card";
+import Section from "../components/Section";
+import PopupWithImage from "../components/PopupWithImage";
+import PopupWithForm from "../components/PopupWithForm";
+import UserInfo from "../components/UserInfo";
+import { settings, showButton, editForm, addButton, addCardForm, nameInput, workInput, initialCards, profileName, profileAbout, editProfileModalWindow, addCardModalWindow, imageModalWindow, cardTemplate, list } from "../utils/constants.js"
 
 const editFormValidator = new FormValidator(settings, editForm);
 const addFormValidator = new FormValidator(settings, addCardForm);
@@ -76,6 +76,6 @@ addButton.addEventListener("click", () => {
     addImagePopup.open();
     addFormValidator.resetValidation();
 });
-// //img popup- avar lemala
+// //img popup
 const imagePopup = new PopupWithImage(imageModalWindow);
 imagePopup.setEventListeners();
