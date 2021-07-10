@@ -3,14 +3,12 @@ export const popupSet = document.querySelectorAll(".popup");
 export const addCardModalWindow = document.querySelector(".popup_type_add-card");
 export const editProfileModalWindow = document.querySelector(".popup_type_edit-profile");
 export const imageModalWindow = document.querySelector(".popup_type-image");
-//buttons 
+
 export const showButton = document.querySelector(".profile__edit"); //open edit 
 export const addButton = document.querySelector(".profile__add"); // big plus btn 
 export const closeButton = editProfileModalWindow.querySelector(".popup__close"); //close edit 
 export const closeAddCardButton = addCardModalWindow.querySelector(".popup__close"); // close add 
-// const closeImageButton = imageModalWindow.querySelector(".popup__close"); 
 export const addSubmitButton = addCardModalWindow.querySelector(".popup__submit");
-//test 
 export const testButton = document.querySelector(".popup__submit");
 export const subButton = document.querySelector(".popup__submit_add-card");
 
@@ -26,6 +24,16 @@ export const list = document.querySelector(".grid");
 export const popupImage = imageModalWindow.querySelector(".popup__image");
 export const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
 export const cardTemplate = "#card-template";
+export const popupAvatar = ".popup_type_avatar";
+export const formAvatar = ".popup__form_type_avatar";
+export const notyet = ".profile__image-overlay";
+export const profilePic = ".profile__picture";
+export const popupDeleteImg = ".popup_type_delete";
+export const profileImageOverlay = ".profile__picture-overlay";
+
+
+
+
 
 
 //cards 

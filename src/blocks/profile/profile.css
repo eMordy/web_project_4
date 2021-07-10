@@ -2,10 +2,11 @@
 @import url('./__about-me/profile__about-me.css');
 @import url('./__add/profile__add.css');
 @import url("./__edit/profile__edit.css");
+@import url("./__picture-container/profile__picture-container.css");
+@import url("./__picture-overlay/profile__picture-overlay.css");
 @import url('./__info-name/profile__info-name.css');
 @import url('./__info/profile__info.css');
 @import url('./__picture/profile__picture.css');
-
 .profile {
     max-width: 880px;
     margin: 40px auto 46.25px;
@@ -34,35 +35,3 @@
         flex-direction: column;
     }
 }
-
-
-/*
-
-.profile {
-    max-width: 882px;
-    margin-top: 40px;
-    margin: 40px auto;
-    display: flex;
-    min-height: 120px;
-    align-items: center;
-    justify-content: flex-start;
-    }
-  
-    
-  
-  
-    @media screen and (max-width: 900px){
-  .profile {
-      flex-direction: column;
-      padding-top: 38px;
-      margin-left: 0;
-      }
-  }
-  
-  @media screen and (max-width: 320px) {
-    .profile {
-      width: 288px;
-      flex-direction: column;
-      margin-top: 38px;
-    
-  }}*/
