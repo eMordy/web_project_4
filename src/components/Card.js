@@ -52,24 +52,21 @@ export default class Card {
         this._likes = likes;
     }
 
-    // Remove delete button if card is not created by user
+    // delete button 
     showDeleteButton() {
         if (this._ownerId !== this._userId) {
             this._element.querySelector(".grid__delete").remove();
         }
     }
 
-    // Delete image
+    //delete imge
     deleteImage() {
         const deleteButton = this._element.querySelector(".grid__delete");
         deleteButton.closest(".grid__card").remove();
     }
 
-
     generateCard() {
         this._setEventListeners();
-
-        // Add data
         this._element.querySelector(".grid__name").textContent = this._name;
         this._image.src = this._link;
         this._image.alt = this._name;
@@ -81,12 +78,11 @@ export default class Card {
     }
 
     _setEventListeners() {
-        // If likes array contains like from user, remove like with handler
         this._likeButton.addEventListener('click', () => {
             if (this._likes.some(like => like._id === this._userId)) {
                 this._handleRemoveLike(this);
                 this._inactiveLike(this);
-            } else { // Otherwise add like with handler
+            } else {
                 this._handleAddLike(this);
                 this._activeLike(this);
             }
@@ -98,5 +94,4 @@ export default class Card {
         this._image
             .addEventListener('click', () => this._handleCardClick({ name: this._name, link: this._link }));
     }
-
 }

@@ -2,7 +2,6 @@ export default class Api {
     constructor({ baseUrl, headers }) {
         this._baseUrl = baseUrl;
         this._headers = headers;
-        // constructor body
     }
 
 
@@ -103,10 +102,10 @@ export default class Api {
             })
     }
 }
-const api = new Api({
-    baseUrl: "https://around.nomoreparties.co/v1/group-12",
-    headers: {
-        authorization: "d0e977b7-e6ef-4c48-940d-30398c6b7f34",
-        "Content-Type": "application/json"
-    }
-});
+// const api = new Api({
+//     baseUrl: "https://around.nomoreparties.co/v1/group-12",
+//     headers: {
+//         authorization: "d0e977b7-e6ef-4c48-940d-30398c6b7f34",
+//         "Content-Type": "application/json"
+//     }      
+// });

@@ -7,18 +7,18 @@ export default class UserInfo {
 
     getUserInfo() {
         return {
-            title: this._nameElement.textContent,
+            userName: this._nameElement.textContent,
             work: this._workElement.textContent
         }
     }
 
     setUserInfo(data) {
-        const { name, work } = data;
-        this._nameElement.textContent = name;
+        const { username, work } = data;
+        this._nameElement.textContent = username;
         this._workElement.textContent = work;
     }
     changeAvatar(data) {
         const { link } = data;
-        this.avatar.src = link;
+        this._avatar.src = link;
     }
 }
