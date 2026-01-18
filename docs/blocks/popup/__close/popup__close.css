@@ -1,0 +1,96 @@
+    .popup__close {
+        background-image: url("../../../images/Close-Icon.svg");
+        height: 55px;
+        width: 55px;
+        background-size: contain;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 5em;
+        font-weight: 400;
+        position: absolute;
+        top: -47px;
+        right: -45px;
+        cursor: pointer;
+        /*display: flex;*/
+    }
+    
+    .popup__close:hover {
+        opacity: .6;
+    }
+    
+    @media screen and (max-width: 900px) {
+        .popup__close {
+            height: 35px;
+            width: 35px;
+            top: -50px;
+            right: 1px;
+        }
+    }
+    /* background-image: url("../../../images/Close-Iconplus.png");
+   
+  
+  
+  background-color: transparent;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 40px;
+   height: 40px;
+   transition-duration: 1s;
+   position: absolute;
+   top: -40px;
+   left: -40px;
+   border: none;
+   transform: rotate(45deg);
+
+  
+}
+
+.popup__close:hover {
+  opacity: .6; 
+
+}
+
+
+@media screen and (max-width: 420px)
+{
+  .popup__close {
+    width: 26px;
+    height: 26px;
+    right:0;
+  }
+
+
+}
+/*.popup__close {
+  background-image: url("../../../images/Close-Iconplus.png");
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  width: 40.7px;
+  height: 40.7px;
+  transition-duration: 1s;
+  position: absolute;
+  top: 110px;
+  left: 885px;
+  border-radius: 50%;
+  
+}
+
+.popup__close:hover {
+  opacity: .6; 
+
+}
+
+
+
+
+@media screen and (max-width: 900px)
+{
+  .popup__close {
+      height: 35px;
+    width: 35px;
+    top: -50px;
+    right: 1px;
+  }
+}*/

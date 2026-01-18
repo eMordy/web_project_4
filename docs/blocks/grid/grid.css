@@ -1,0 +1,32 @@
+@import url(./__card/grid__card.css);
+@import url(./__text/grid__text.css);
+@import url(./__pic/grid__pic.css);
+@import url(./__name/grid__name.css);
+@import url(./__delete/grid__delete.css);
+@import url(./__heart/grid__heart.css);
+@import url(./grid__likes-container/grid__likes-container.css);
+@import url(./__likes-count/grid__likes-count.css);
+.grid {
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    grid-column-gap: 17px;
+    grid-row-gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .grid {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .grid {
+        width: calc(100% - 38px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,37 @@
+@import url('./__container/profile__container.css');
+@import url('./__about-me/profile__about-me.css');
+@import url('./__add/profile__add.css');
+@import url("./__edit/profile__edit.css");
+@import url("./__picture-container/profile__picture-container.css");
+@import url("./__picture-overlay/profile__picture-overlay.css");
+@import url('./__info-name/profile__info-name.css');
+@import url('./__info/profile__info.css');
+@import url('./__picture/profile__picture.css');
+.profile {
+    max-width: 880px;
+    margin: 40px auto 46.25px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+    .profile {
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 879px) {
+    .profile {
+        /* width: 288px;
+    flex-direction: column;
+    margin-top: 38px; לבדוק לשנות פשוט את המרגין
+  */
+        margin: 0 auto;
+        margin: 38px auto 36px;
+        flex-direction: column;
+    }
+}

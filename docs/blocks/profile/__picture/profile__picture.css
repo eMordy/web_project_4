@@ -1,0 +1,26 @@
+        .profile__picture {
+            /* position: relative;
+            box-sizing: border-box;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            overflow: hidden; */
+            border-radius: 50%;
+            max-width: 127.5px;
+            min-height: 127.5px;
+            transition: opacity .3s ease-in-out .3s;
+            position: relative;
+        }
+        /*
+.profile__picture {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+
+/* width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    
+  }*/
