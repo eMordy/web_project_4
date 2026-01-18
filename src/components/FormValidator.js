@@ -7,11 +7,9 @@ export default class FormValidator {
         this._errorClass = settings.errorClass;
         this._formElement = formElement;
 
-        this._inputList = Array.from(
-            this._formElement.querySelectorAll(this._inputSelector)
-        );
-
+        this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
         this._button = this._formElement.querySelector(this._submitButtonSelector);
+
     }
 
 
