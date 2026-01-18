@@ -7,8 +7,14 @@ export default class FormValidator {
         this._errorClass = settings.errorClass;
         this._formElement = formElement;
 
-        this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
-        this._button = this._formElement.querySelector(this._submitButtonSelector);
+        // DOM elements
+        this._inputList = Array.from(
+            this._formElement.querySelectorAll(this._inputSelector)
+        );
+
+        this._button = this._formElement.querySelector(
+            this._submitButtonSelector
+        );
 
     }
 
@@ -75,6 +81,15 @@ export default class FormValidator {
             this._button.disabled = false;
         }
     }*/
+    /*_toggleButtonState() {
+        if (this._isValid(this._inputList)) {
+            this._button.classList.add(this._inactiveButtonClass);
+            this._button.disabled = true;
+        } else {
+            this._button.classList.remove(this._inactiveButtonClass);
+            this._button.disabled = false;
+        }
+    }*/
     _toggleButtonState() {
         if (this._isValid(this._inputList)) {
             this._button.classList.add(this._inactiveButtonClass);
@@ -84,6 +99,7 @@ export default class FormValidator {
             this._button.disabled = false;
         }
     }
+
 
 
     resetValidation() {
