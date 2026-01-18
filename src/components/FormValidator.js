@@ -1,6 +1,21 @@
 export default class FormValidator {
-
     constructor(settings, formElement) {
+        this._inputSelector = settings.inputSelector;
+        this._submitButtonSelector = settings.submitButtonSelector;
+        this._inactiveButtonClass = settings.inactiveButtonClass;
+        this._inputErrorClass = settings.inputErrorClass;
+        this._errorClass = settings.errorClass;
+        this._formElement = formElement;
+
+        this._inputList = Array.from(
+            this._formElement.querySelectorAll(this._inputSelector)
+        );
+
+        this._button = this._formElement.querySelector(this._submitButtonSelector);
+    }
+
+
+    /*constructor(settings, formElement) {
         this._inputSelector = settings.inputSelector;
         this._submitButtonSelector = settings.submitButtonSelector;
         this._inactiveButtonClass = settings.inactiveButtonClass;
@@ -16,7 +31,7 @@ export default class FormValidator {
         this._button = this._submitButtonSelector;
         console.log(formElement)
 
-    }
+    } */
     _showErrorMessage(inputElement, errorMessage) {
         const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this._inputErrorClass);
@@ -53,7 +68,7 @@ export default class FormValidator {
 
     //     }
     // }
-    _toggleButtonState() {
+    /* _toggleButtonState() {
         if (this._hasInvalidInput(this._inputList)) {
             this._button.classList.add(this._inactiveButtonClass);
             this._button.disabled = true;
@@ -61,7 +76,17 @@ export default class FormValidator {
             this._button.classList.remove(this._inactiveButtonClass);
             this._button.disabled = false;
         }
+    }*/
+    _toggleButtonState() {
+        if (this._isValid(this._inputList)) {
+            this._button.classList.add(this._inactiveButtonClass);
+            this._button.disabled = true;
+        } else {
+            this._button.classList.remove(this._inactiveButtonClass);
+            this._button.disabled = false;
+        }
     }
+
 
     resetValidation() {
         this._toggleButtonState();
