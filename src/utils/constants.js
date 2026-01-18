@@ -14,8 +14,12 @@ export const subButton = document.querySelector(".popup__submit_add-card");
 
 export const profileName = document.querySelector(".profile__info-name"); //title name 
 export const profileAbout = document.querySelector(".profile__about-me"); //title des 
+//export const addCardForm = document.querySelector(".popup__form_type_add");
 export const addCardForm = document.querySelector(".popup__form_type_add");
+
+//export const editForm = document.querySelector(".popup__form_type_edit");
 export const editForm = document.querySelector(".popup__form_type_edit");
+
 export const nameInput = document.querySelector(".popup__input_type_name"); //input 
 export const workInput = document.querySelector(".popup__input_type-about"); //input 
 export const titleInput = addCardModalWindow.querySelector(".popup__input_type_title");
@@ -25,7 +29,9 @@ export const popupImage = imageModalWindow.querySelector(".popup__image");
 export const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
 export const cardTemplate = "#card-template";
 export const popupAvatar = ".popup_type_avatar";
-export const formAvatar = ".popup__form_type_avatar";
+//export const formAvatar = ".popup__form_type_avatar";
+export const formAvatar = document.querySelector(".popup__form_type_avatar");
+
 export const profilePic = ".profile__picture";
 export const popupDeleteImg = ".popup_type_delete";
 export const profileImageOverlay = ".profile__picture-overlay";
